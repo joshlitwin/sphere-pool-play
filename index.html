@@ -2,31 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <title>Sphere Pool</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/index-DawC6LQm.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BXvjmcSb.css">
+  <script type="module" crossorigin src="./assets/index-Um4k1aZU.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DX0ECAOu.css">
 </head>
 <body>
-  <div class="app">
+  <!-- One fixed screen: score bar, the pool, and the thumb zone (drag anywhere empty to swim; picks sit at its foot). -->
+  <div class="app" id="app">
     <header class="board">
+      <button class="icon" id="menuBtn" aria-label="Menu">☰</button>
       <div class="side you"><span class="tname" id="n0"></span><span class="score" id="s0">0</span></div>
       <div class="clock"><div class="t" id="clock">5:00</div><div class="h" id="half">1st half</div></div>
-      <div class="side r them"><span class="tname" id="n1"></span><span class="score" id="s1">0</span></div>
+      <div class="side r them"><span class="score" id="s1">0</span><span class="tname" id="n1"></span></div>
+      <button class="icon" id="infoBtn" aria-label="The numbers">i</button>
     </header>
-    <div class="stage">
+    <div class="stage" id="stage">
       <canvas id="pool" aria-label="Top-down view of the sphere pool"></canvas>
+      <div class="toast" id="toast" aria-live="polite"></div>
       <div class="overlay" id="overlay" hidden></div>
     </div>
-    <section class="panel" id="panel" aria-live="polite"></section>
-    <div class="foot">
-      <span><button class="mini" id="helpBtn">How to play</button></span>
-      <span><button class="mini" id="autoBtn">Auto-pilot: off</button> <button class="mini" id="newBtn">New match</button></span>
-    </div>
+    <section class="zone" id="zone">
+      <div class="status" id="status" aria-live="polite"></div>
+      <div class="slots">
+        <button class="slot" id="slot0" data-i="0"></button>
+        <button class="slot" id="slot1" data-i="1"></button>
+        <button class="slot" id="slot2" data-i="2"></button>
+      </div>
+    </section>
+    <div class="stick" id="stick" hidden><div class="knob" id="knob"></div></div>
   </div>
   <div class="sheet" id="intro" hidden role="dialog" aria-modal="true" aria-labelledby="introTitle"></div>
+  <div class="sheet" id="menu" hidden role="dialog" aria-modal="true" aria-label="Menu"></div>
+  <div class="sheet" id="info" hidden role="dialog" aria-modal="true" aria-label="The numbers"></div>
 </body>
 </html>
