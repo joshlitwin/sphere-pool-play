@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sphere Pool · Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --abyss: #061821; --panel: #0e3242; --line: #225a6e; --ink: #e2f3f5; --muted: #8fb8c3; --you: #5ae4b0; --gold: #ffd36b; color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--abyss); color: var(--ink); font-family: "Barlow", system-ui, sans-serif; line-height: 1.4; }
+    main { max-width: 520px; margin: 0 auto; padding: calc(env(safe-area-inset-top, 0px) + 20px) 16px calc(env(safe-area-inset-bottom, 0px) + 24px); display: flex; flex-direction: column; gap: 12px; }
+    h1 { font-family: "Chakra Petch", sans-serif; font-size: 26px; margin: 0; }
+    p { margin: 0; color: var(--muted); }
+    a.card { display: block; text-decoration: none; color: inherit; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+    a.card:active, a.card:hover { border-color: var(--you); }
+    .card h2 { font-family: "Chakra Petch", sans-serif; font-size: 19px; margin: 0 0 4px; }
+    .card .tag { color: var(--gold); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-family: "Chakra Petch", sans-serif; }
+    .card p { font-size: 14.5px; margin-top: 4px; }
+    .back { color: var(--you); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Mockups</h1>
+    <p>Four rough takes on what could make Sphere Pool fun. Each is a 2-minute 4v4 match on a tall pitch. Play one match of each, then tell Claude: did you want a rematch, did you feel clever, did anything make you react out loud, and did it ever feel like waiting?</p>
+    <a class="card" href="./slipstream/"><span class="tag">A · no menus</span><h2>Slipstream</h2><p>Play never stops. Hold your thumb down to slow time and pull back to aim a pass or shot through the gaps.</p></a>
+    <a class="card" href="./lanes/"><span class="tag">B · Blitzball, done right</span><h2>Lanes</h2><p>A few stops, each a puzzle: every pass and shot shows how much survives the distance and the defenders in its way.</p></a>
+    <a class="card" href="./showdowns/"><span class="tag">C · play the moments</span><h2>Showdowns</h2><p>The match flows by itself; you call tactics and play the big moments, reading an opponent that learns your habits.</p></a>
+    <a class="card" href="./tide/"><span class="tag">D · tug of war</span><h2>Tide</h2><p>Quick Safe-or-Bold duels push the tide line toward their goal, and the heat builds with every clean exchange.</p></a>
+    <p><a class="back" href="../">← The current game</a> · How they were chosen: docs/design/mockup-guide.md</p>
+  </main>
+</body>
+</html>
